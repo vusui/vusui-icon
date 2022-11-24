@@ -83,6 +83,8 @@ app.mount("#app");
 
 ### Symbol
 
+💡 使用 svg 图标时，建议封装成公共组件来调用。
+
 ```html
 <!--svg 引用方法-->
 <svg class="vusuiSvg" aria-hidden="true">
