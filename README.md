@@ -20,7 +20,6 @@ $ pnpm install @vusui/icon
 ```
 
 ## 全局使用
-
 ```ts
 // main.ts
 import { createApp } from 'vue';
@@ -36,10 +35,6 @@ const app = createApp({});
 app.mount("#app");
 ```
 
-
-
-
-
 ## 浏览器直接引入
 
 直接通过浏览器的 HTML 标签导入 vusui-icon，然后就可以使用 Vusui-icon 图标库了。
@@ -52,6 +47,9 @@ app.mount("#app");
 <head>
   <!-- 引入图标库 -->
   <link rel="stylesheet" href="//unpkg.com/@vusui/icon/font/index.css" />
+  <!-- 引入svg图标库 -->
+  <link rel="stylesheet" href="//unpkg.com/@vusui/icon/svg/style.css" />
+  <script src="//unpkg.com/@vusui/icon/svg"></script>
 </head>
 ```
 
@@ -61,6 +59,34 @@ app.mount("#app");
 <head>
   <!-- 引入图标库 -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@vusui/icon/font/index.css" />
+  <!-- 引入svg图标库 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@vusui/icon/svg/style.css" />
+  <script src="//cdn.jsdelivr.net/npm/@vusui/icon/svg"></script>
 </head>
+```
+
+## HTML中使用
+
+### Unicode
+
+```html
+<!--Unicode 引用方法-->
+<i class="vusuiIcon">&#xedbd;</i>
+```
+
+### Font Class
+
+```html
+<!--class 样式引用方法-->
+<i class="vi-home"></i>
+```
+
+### Symbol
+
+```html
+<!--svg 引用方法-->
+<svg class="vusuiSvg" aria-hidden="true">
+  <use xlink:href="#vi-home"></use>
+</svg>
 ```
 
