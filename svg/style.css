@@ -1,0 +1,16 @@
+/*
+ * @Description: vusui-icon svg图标样式
+ * @Author: linpan(45650368@qq.com)
+ * @Date: 2022-11-24 15:04:36
+ * @LastEditors: linp linp@epsoft.com.cn
+ * @LastEditTime: 2022-11-24 15:04:47
+ * @WebSite: https://vusui.com
+ * @Copyright: 2017-present The Vusui Authors
+ * @Readme: 开源不易，且用且珍惜！
+ */
+.vusuiSvg {
+  width: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}

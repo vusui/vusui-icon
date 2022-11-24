@@ -1,0 +1,37 @@
+{
+  "name": "@vusui/icon",
+  "version": "0.0.1",
+  "private": false,
+  "description": "集成 500+ 个常用的图标。",
+  "main": "svg/index.js",
+  "module": "svg/index.js",
+  "unpkg": "svg/index.js",
+  "jsdelivr": "svg/index.js",
+  "files": [
+    "svg",
+    "font"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "@vusui/icon",
+    "vusui-icon",
+    "vusui",
+    "icon",
+    "图标库",
+    "svg",
+    "iconfont"
+  ],
+  "author": "linpan(45650368@qq.com)",
+  "license": "MIT",
+  "homepage": "https://vusui.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vusui/vusui-icon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vusui/vusui-icon/issues"
+  }
+}
