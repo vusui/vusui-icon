@@ -1,8 +1,8 @@
 # Vusui-icon 图标库
 
-集成 500+ 个常用的图标。
+一套集成了 500+ 个常用图标的字体图标库。
 
-【[使用文档](https://www.vusui.com/icon)】|【[在线预览](https://www.vusui.com/icon/guide/demo.html)】
+【[使用文档](https://www.vusui.com/icon)】|【[在线预览](https://www.vusui.com/icon/docs/guide/demo.html)】
 
 ## 使用包管理器
 
@@ -20,16 +20,17 @@ $ pnpm install @vusui/icon
 ```
 
 ## 全局使用
+
 ```ts
 // main.ts
-import { createApp } from 'vue';
-
-// 引入svg图标库
-import '@vusui/icon/svg';
-import '@vusui/icon/svg/style.css';
+import { createApp } from "vue";
 
 // 引入图标库
-import '@vusui/icon/font/index.css';
+import "@vusui/icon/font/index.css";
+
+// 或者引入svg格式图标库
+import "@vusui/icon/svg";
+import "@vusui/icon/svg/style.css";
 
 const app = createApp({});
 app.mount("#app");
@@ -47,7 +48,7 @@ app.mount("#app");
 <head>
   <!-- 引入图标库 -->
   <link rel="stylesheet" href="//unpkg.com/@vusui/icon/font/index.css" />
-  <!-- 引入svg图标库 -->
+  <!-- 或者使用svg格式的图标库 -->
   <link rel="stylesheet" href="//unpkg.com/@vusui/icon/svg/style.css" />
   <script src="//unpkg.com/@vusui/icon/svg"></script>
 </head>
@@ -58,37 +59,59 @@ app.mount("#app");
 ```html
 <head>
   <!-- 引入图标库 -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@vusui/icon/font/index.css" />
-  <!-- 引入svg图标库 -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@vusui/icon/svg/style.css" />
+  <link
+    rel="stylesheet"
+    href="//cdn.jsdelivr.net/npm/@vusui/icon/font/index.css"
+  />
+  <!-- 或者使用svg格式的图标库 -->
+  <link
+    rel="stylesheet"
+    href="//cdn.jsdelivr.net/npm/@vusui/icon/svg/style.css"
+  />
   <script src="//cdn.jsdelivr.net/npm/@vusui/icon/svg"></script>
 </head>
 ```
 
-## HTML中使用
+## Unicode
 
-### Unicode
-
-```html
+```vue
 <!--Unicode 引用方法-->
-<i class="vusuiIcon">&#xedbd;</i>
+<template>
+  <i class="vusuiIcon">&#xedbd;</i>
+</template>
+
+<script>
+import "@vusui/icon/font/index.css";
+</script>
 ```
 
-### Font Class
+## Font Class
 
-```html
+```vue
 <!--class 样式引用方法-->
-<i class="vi-home"></i>
+<template>
+  <i class="vi-home"></i>
+</template>
+
+<script>
+import "@vusui/icon/font/index.css";
+</script>
 ```
 
-### Symbol
+## Symbol
 
 💡 使用 svg 图标时，建议封装成公共组件来调用。
 
-```html
+```vue
 <!--svg 引用方法-->
-<svg class="vusuiSvg" aria-hidden="true">
-  <use xlink:href="#vi-home"></use>
-</svg>
-```
+<template>
+  <svg class="vusuiSvg" aria-hidden="true">
+    <use xlink:href="#vi-home"></use>
+  </svg>
+</template>
 
+<script>
+import "@vusui/icon/svg";
+import "@vusui/icon/svg/style.css";
+</script>
+```
